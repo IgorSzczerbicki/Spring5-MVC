@@ -30,6 +30,8 @@ dependencies {
 	compile 'org.springframework:spring-core'
 	compile 'org.springframework:spring-context'
 	compile 'org.springframework:spring-webmvc'
+	compile 'javax.servlet:jstl:1.2'
+	compile 'javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1'
 	def junitVersion = '5.0.3'
     testCompile 'org.junit.jupiter:junit-jupiter-api:' + junitVersion
     testCompile 'org.junit.jupiter:junit-jupiter-engine:' + junitVersion

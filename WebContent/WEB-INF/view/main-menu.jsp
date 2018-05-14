@@ -9,5 +9,6 @@
 <body>
 	<h2>Spring 5 MVC</h2>
 	<h3><a href="showForm"> Form</a></h3>
+	<h3><a href="showFormUpperCase"> Form</a></h3>
 </body>
 </html>

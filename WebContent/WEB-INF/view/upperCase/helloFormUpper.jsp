@@ -7,7 +7,7 @@
 <title>Hello World</title>
 </head>
 <body>
-	<form action="processFormRequestParam" method="get">
+	<form action="processForm" method="get">
 		<input type="text" name="name" placeholder="What's your name?"/>
 		
 		<input type="submit" />

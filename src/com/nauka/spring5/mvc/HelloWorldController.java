@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -45,4 +46,26 @@ public class HelloWorldController {
 		//zwrocenie nazwy widoku
 		return "helloUpper";
 	}
+	
+	//metoda kontrolera do wyswietlania formularza
+	@RequestMapping("/showFormRequestParam")
+		public String showFormRequestParam() {
+				return "helloFormRequestParam";
+			}
+			//metoda pobiera dane z formularza, zmienia je po czym dodaje do modelu
+		@RequestMapping("/processFormRequestParam")
+		public String processFormRequestParam(@RequestParam("name") String theName, Model model) {
+
+			//zamiana na duze litery
+			theName = theName.toUpperCase();
+			
+			//stworzenie wiadomosci wynikowej
+			String result = "Hej " + theName;
+			
+			//dodanie wyniku do modelu
+			model.addAttribute("message", result);
+			
+			//zwrocenie nazwy widoku
+			return "helloRequestParam";
+		}
 }

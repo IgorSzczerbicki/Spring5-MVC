@@ -1,4 +1,4 @@
-package com.nauka.spring5.mvc;
+package com.nauka.spring5.mvc.controler;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,17 +7,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@RequestMapping("/requestParam")
+@RequestMapping("/upperCase")
 @Controller
-public class HelloWorldRequestParamController {
+public class HelloWorldUpperCaseController {
+
 	//metoda kontrolera do wyswietlania formularza
 	@RequestMapping("/showForm")
-	public String showFormRequestParam() {
-		return "requestParam/helloFormRequestParam";
+	public String showFormUpperCase() {
+		return "upperCase/helloFormUpper";
 	}
+
 	//metoda pobiera dane z formularza, zmienia je po czym dodaje do modelu
 	@RequestMapping("/processForm")
-	public String processFormRequestParam(@RequestParam("name") String theName, Model model) {
+	public String processFormUpperCase(HttpServletRequest request, Model model) {
+		//pobranie danych z formularza
+		String theName = request.getParameter("name");
 
 		//zamiana na duze litery
 		theName = theName.toUpperCase();
@@ -29,6 +33,6 @@ public class HelloWorldRequestParamController {
 		model.addAttribute("message", result);
 
 		//zwrocenie nazwy widoku
-		return "requestParam/helloRequestParam";
+		return "upperCase/helloUpper";
 	}
 }

@@ -11,5 +11,6 @@
 	<h3><a href="hello/showForm"> Form</a></h3>
 	<h3><a href="upperCase/showForm"> Form with model</a></h3>
 	<h3><a href="requestParam/showForm"> Form with request param</a></h3>
+	<h3><a href="student/new"> Form using model </a></h3>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.nauka.spring5.mvc;
+package com.nauka.spring5.mvc.controler;
 
 import javax.servlet.http.HttpServletRequest;
 

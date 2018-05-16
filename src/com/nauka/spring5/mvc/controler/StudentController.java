@@ -20,7 +20,7 @@ public class StudentController {
 	
 	@RequestMapping("/process")
 	public String processStudent(@ModelAttribute("student") Student student) {
-		System.out.println("New student: " + student.getSurname() + " " + student.getName());
+		System.out.println("New student: " + student.getSurname() + " " + student.getName() + " from " + student.getCountry());
 		return "student/confirmation";
 	}
 }

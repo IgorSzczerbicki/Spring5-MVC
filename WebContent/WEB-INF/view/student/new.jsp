@@ -12,6 +12,11 @@
 <form:form action="process" modelAttribute="student">
 Imie: <form:input path="name" /><br>
 Nazwisko: <form:input path="surname" /><br>
+Kraj: <form:select path="country">
+	<form:option value="Brazil" label="Brazil" />
+	<form:option value="Poland" label="Poland" />
+	<form:option value="Ireland" label="Ireland" />
+</form:select>
 <input type ="submit" value="Wyślij" />
 </form:form>
 </body>

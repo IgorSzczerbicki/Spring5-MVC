@@ -7,6 +7,6 @@
 <title>New student confimation</title>
 </head>
 <body>
-Nowy student: ${student.surname} ${student.name}
+Nowy student: ${student.surname} ${student.name} pochodzący z ${student.country}
 </body>
 </html>

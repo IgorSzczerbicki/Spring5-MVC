@@ -1,5 +1,8 @@
 package com.nauka.spring5.mvc.domain;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,13 +13,27 @@ public class Student {
 	private String surname;
 	private String country;
 	
-	public Student() {}
+	private Map<String, String> countryOptions;
+	
+	public Student() {
+		countryOptions = new LinkedHashMap<>();
+		
+		countryOptions.put("BR", "Brazil");
+		countryOptions.put("PL", "Poland");
+		countryOptions.put("IE", "Ireland");
+		countryOptions.put("DE", "Germany");
+	}
 	
 	public Student(String n, String s) {
+		this();
 		this.name = n;
 		this.surname = s;
 	}
 	
+	public Map<String, String> getCountryOptions() {
+		return countryOptions;
+	}
+
 	public String getCountry() {
 		return country;
 	}

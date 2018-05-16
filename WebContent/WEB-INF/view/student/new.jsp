@@ -13,9 +13,7 @@
 Imie: <form:input path="name" /><br>
 Nazwisko: <form:input path="surname" /><br>
 Kraj: <form:select path="country">
-	<form:option value="Brazil" label="Brazil" />
-	<form:option value="Poland" label="Poland" />
-	<form:option value="Ireland" label="Ireland" />
+	<form:options items="${student.countryOptions}" />
 </form:select>
 <input type ="submit" value="Wyślij" />
 </form:form>

@@ -12,6 +12,7 @@ public class Student {
 	private String name;
 	private String surname;
 	private String country;
+	private String favoriteLanguage;
 	
 	private Map<String, String> countryOptions;
 	
@@ -30,6 +31,14 @@ public class Student {
 		this.surname = s;
 	}
 	
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
 	public Map<String, String> getCountryOptions() {
 		return countryOptions;
 	}

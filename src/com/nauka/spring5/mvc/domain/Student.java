@@ -13,6 +13,7 @@ public class Student {
 	private String surname;
 	private String country;
 	private String favoriteLanguage;
+	private String[] operatingSystems;
 	
 	private Map<String, String> countryOptions;
 	private Map<String, String> languageOptions;
@@ -31,11 +32,19 @@ public class Student {
 		languageOptions.put("C#", "C#");
 		languageOptions.put("Scala", "Scala");
 	}
-	
+
 	public Student(String n, String s) {
 		this();
 		this.name = n;
 		this.surname = s;
+	}
+	
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 	
 	public String getFavoriteLanguage() {

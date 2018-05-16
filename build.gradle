@@ -9,6 +9,14 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+}
+
 buildscript {
     repositories {
         jcenter()
@@ -27,6 +35,7 @@ dependencyManagement {
 }
 
 dependencies {
+	compile 'javax.servlet:javax.servlet-api:4.0.1'
 	compile 'org.springframework:spring-core'
 	compile 'org.springframework:spring-context'
 	compile 'org.springframework:spring-webmvc'

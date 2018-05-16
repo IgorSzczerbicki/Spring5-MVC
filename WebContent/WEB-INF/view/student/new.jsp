@@ -16,9 +16,7 @@ Kraj: <form:select path="country">
 	<form:options items="${student.countryOptions}" />
 </form:select><br>
 Ulubiony język:
-	Java <form:radiobutton path="favoriteLanguage" value="Java"/>
-	C++ <form:radiobutton path="favoriteLanguage" value="C++"/>
-	Scala <form:radiobutton path="favoriteLanguage" value="Scala"/>
+	<form:radiobuttons path="favoriteLanguage" items="${student.languageOptions}"/>
 <input type ="submit" value="Wyślij" />
 </form:form>
 </body>

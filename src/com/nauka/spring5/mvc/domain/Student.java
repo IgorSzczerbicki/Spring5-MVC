@@ -15,6 +15,7 @@ public class Student {
 	private String favoriteLanguage;
 	
 	private Map<String, String> countryOptions;
+	private Map<String, String> languageOptions;
 	
 	public Student() {
 		countryOptions = new LinkedHashMap<>();
@@ -23,6 +24,12 @@ public class Student {
 		countryOptions.put("PL", "Poland");
 		countryOptions.put("IE", "Ireland");
 		countryOptions.put("DE", "Germany");
+		
+		languageOptions = new LinkedHashMap<>();
+		
+		languageOptions.put("Java", "Java");
+		languageOptions.put("C#", "C#");
+		languageOptions.put("Scala", "Scala");
 	}
 	
 	public Student(String n, String s) {
@@ -33,6 +40,10 @@ public class Student {
 	
 	public String getFavoriteLanguage() {
 		return favoriteLanguage;
+	}
+
+	public Map<String, String> getLanguageOptions() {
+		return languageOptions;
 	}
 
 	public void setFavoriteLanguage(String favoriteLanguage) {

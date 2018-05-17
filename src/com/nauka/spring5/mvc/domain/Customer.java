@@ -3,6 +3,7 @@ package com.nauka.spring5.mvc.domain;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
@@ -16,9 +17,20 @@ public class Customer {
 		@Min(value=0, message="wiek wiêkszy ni¿ 0")
 		@Max(value = 100, message="wiek mniejszy ni¿ 100")
 		private int age;
+		
+		@Pattern(regexp="^[a-zA-Z0-9]{5}", message="dok³adnie 5 znaków")
+		private String signs;
 
 		public String getName() {
 			return name;
+		}
+
+		public String getSigns() {
+			return signs;
+		}
+
+		public void setSigns(String signs) {
+			this.signs = signs;
 		}
 
 		public int getAge() {

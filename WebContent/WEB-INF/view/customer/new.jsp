@@ -17,7 +17,10 @@
 		<form:errors path="surname" cssClass="error"/><br>
 		
 		Age(0-100): <form:input path="age" />
-		<form:errors path="age" cssClass="error" /><br>		
+		<form:errors path="age" cssClass="error" /><br>
+		
+		Signs(5): <form:input path="signs" />
+		<form:errors path="signs" cssClass="error"/><br>
 		
 		<input type="submit" value ="Wyślij" />
 	</form:form>

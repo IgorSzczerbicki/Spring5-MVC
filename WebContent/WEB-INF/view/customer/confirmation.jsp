@@ -7,6 +7,7 @@
 <title>Dodano nowego klienta</title>
 </head>
 <body>
-	Nowy klient: ${customer.surname} ${customer.name}, wiek: ${customer.age}
+	Nowy klient: ${customer.surname} ${customer.name}, wiek: ${customer.age} <br>
+	Znaki: ${customer.signs}
 </body>
 </html>

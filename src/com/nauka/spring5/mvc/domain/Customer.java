@@ -14,9 +14,10 @@ public class Customer {
 		@Size(min=1, message="wymagane pole")
 		private String surname;
 		
+		@NotNull(message="wymagane pole")
 		@Min(value=0, message="wiek wiêkszy ni¿ 0")
 		@Max(value = 100, message="wiek mniejszy ni¿ 100")
-		private int age;
+		private Integer age;
 		
 		@Pattern(regexp="^[a-zA-Z0-9]{5}", message="dok³adnie 5 znaków")
 		private String signs;
@@ -33,11 +34,11 @@ public class Customer {
 			this.signs = signs;
 		}
 
-		public int getAge() {
+		public Integer getAge() {
 			return age;
 		}
 
-		public void setAge(int age) {
+		public void setAge(Integer age) {
 			this.age = age;
 		}
 

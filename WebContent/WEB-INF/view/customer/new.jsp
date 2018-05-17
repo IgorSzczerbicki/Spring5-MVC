@@ -14,9 +14,10 @@
 	<form:form action="processForm" modelAttribute="customer">
 		Name: <form:input path="name" /><br>
 		Surname(*) <form:input path="surname" />
-		<form:errors path="surname" cssClass="error"/>
+		<form:errors path="surname" cssClass="error"/><br>
 		
-		<br>
+		Age(0-100): <form:input path="age" />
+		<form:errors path="age" cssClass="error" /><br>		
 		
 		<input type="submit" value ="Wyślij" />
 	</form:form>

@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.nauka.spring5.mvc.validation.CourseCode;
+
 public class Customer {
 
 		private String name;
@@ -21,9 +23,20 @@ public class Customer {
 		
 		@Pattern(regexp="^[a-zA-Z0-9]{5}", message="dok³adnie 5 znaków")
 		private String signs;
+		
+		@CourseCode
+		private String courseCode;
 
 		public String getName() {
 			return name;
+		}
+
+		public String getCourseCode() {
+			return courseCode;
+		}
+
+		public void setCourseCode(String courseCode) {
+			this.courseCode = courseCode;
 		}
 
 		public String getSigns() {

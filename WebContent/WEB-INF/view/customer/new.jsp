@@ -22,6 +22,9 @@
 		Signs(5): <form:input path="signs" />
 		<form:errors path="signs" cssClass="error"/><br>
 		
+		Kod kursu: <form:input path="courseCode" />
+		<form:errors path="courseCode" cssClass="error" /><br>
+		
 		<input type="submit" value ="Wyślij" />
 	</form:form>
 </body>

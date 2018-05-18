@@ -8,6 +8,7 @@
 </head>
 <body>
 	Nowy klient: ${customer.surname} ${customer.name}, wiek: ${customer.age} <br>
-	Znaki: ${customer.signs}
+	Znaki: ${customer.signs} <br>
+	Kurs: ${customer.courseCode}<br>
 </body>
 </html>
